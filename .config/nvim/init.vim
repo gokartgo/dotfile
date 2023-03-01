@@ -28,3 +28,6 @@ set number
 " set copy to clipboard
 set clipboard+=unnamedplus
 
+" set ignore case
+set ignorecase
+set smartcase

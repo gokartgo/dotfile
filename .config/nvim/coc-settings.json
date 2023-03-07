@@ -1,5 +1,6 @@
 {
   "yaml.schemas": {
-      "kubernetes": "/*.yaml"
-  }
+    "kubernetes": "**/kubernetes/*.yaml"
+  },
+  "Lua.diagnostics.globals": ["vim"]
 }

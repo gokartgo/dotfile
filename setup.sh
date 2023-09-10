@@ -4,6 +4,8 @@
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ### neo vim
 # brew install neovim
+### ripgrep use with telescope
+# brew install ripgrep
 ### neo vim plug
 # curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 # nvim +PlugInstall +qall

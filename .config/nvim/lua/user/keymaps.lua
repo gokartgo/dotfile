@@ -37,3 +37,6 @@ keymap("v", "<S-j>", ":move'>+<CR>gv=gv", opts)
 
 -- Replace Without Copy Deleted Word
 keymap("v", "p", '"_dP', opts)
+
+-- Join line without move cursor
+keymap("n", "J", "mzJ`z", opts)

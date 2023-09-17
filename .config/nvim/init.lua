@@ -4,6 +4,7 @@ dofile(os.getenv("HOME") .. "/.dotfiles/.config/nvim/wilder.lua")
 -- add before coc because problem key map <CR>
 dofile(os.getenv("HOME") .. "/.dotfiles/.config/nvim/nvim-autopairs.lua")
 dofile(os.getenv("HOME") .. "/.dotfiles/.config/nvim/coc.lua")
+dofile(os.getenv("HOME") .. "/.dotfiles/.config/nvim/oceanic-next.lua")
 
 require "user.options"
 require "user.keymaps"

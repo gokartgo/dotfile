@@ -1,6 +1,3 @@
-vim.opt.termguicolors = true                      -- set neovim theme
-vim.cmd('colorscheme OceanicNext')
-
 vim.opt.number = true                             -- set line number
 vim.opt.clipboard = 'unnamedplus'                 -- set copy to clipboard
 
@@ -12,5 +9,7 @@ vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.bo.softtabstop = 2
 
-vim.opt.statusline = 'col: %c'                    -- set show column number in status line
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
+vim.opt.statusline = 'col: %c %=file: %f '                    -- set show column number in status line

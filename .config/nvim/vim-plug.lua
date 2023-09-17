@@ -7,10 +7,16 @@ Plug('neoclide/coc.nvim', { branch = 'release' })
 Plug 'nvim-tree/nvim-web-devicons' -- optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua' -- file explorer
 Plug 'windwp/nvim-autopairs' -- auto pairs ) } ]
+Plug 'mbbill/undotree' -- track file change
+Plug 'tpope/vim-fugitive' -- git handle
 
 -- telescope is a highly extendable fuzzy finder over lists
 Plug 'nvim-lua/plenary.nvim'
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.2' })
+
+-- harpoon is use for navigate to file that you opened before
+Plug 'nvim-lua/plenary.nvim'
+Plug 'ThePrimeagen/harpoon'
 
 -- auto complete in Ex commands
   function UpdateRemotePlugins(...)

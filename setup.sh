@@ -9,7 +9,6 @@
 ### neo vim plug
 # curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 # nvim +PlugInstall +qall
-# nvim +"CocInstall -sync coc-tsserver coc-json coc-yaml coc-lua" +qall
 
 ### install oh my zsh for decorate iterm2 ( --unattended fix problem about bash script exits after installing oh my zsh )
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended

@@ -3,7 +3,6 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin', vim.fn.stdpath('data') .. '/plugged')
 
 Plug 'mhartington/oceanic-next' -- theme
-Plug('neoclide/coc.nvim', { branch = 'release' })
 Plug 'nvim-tree/nvim-web-devicons' -- optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua' -- file explorer
 Plug 'windwp/nvim-autopairs' -- auto pairs ) } ]

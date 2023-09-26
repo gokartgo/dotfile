@@ -40,3 +40,10 @@ keymap("v", "p", '"_dP', opts)
 
 -- Join line without move cursor
 keymap("n", "J", "mzJ`z", opts)
+
+-- Search selected text
+keymap("v", "<leader>f", "*<Esc>", opts)
+
+-- Clear search text
+keymap("n", "<leader><leader>", ":let @/ = \"\"<CR>", opts)
+

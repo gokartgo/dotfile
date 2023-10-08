@@ -42,7 +42,10 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "J", "mzJ`z", opts)
 
 -- Search selected text
-keymap("v", "<leader>f", "*<Esc>", opts)
+keymap("v", "<leader>f", "y/<C-r>\"<CR>", opts)
+
+-- Replace all selected text
+keymap("v", "<leader>ra", "y:%s/<C-r>\"/", opts)
 
 -- Clear search text
 keymap("n", "<leader><leader>", ":let @/ = \"\"<CR>", opts)

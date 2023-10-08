@@ -15,6 +15,9 @@ local function custom_on_attach(bufnr)
   -- use all default mappings 
   api.config.mappings.default_on_attach(bufnr)
 
+  -- remove a default
+  vim.keymap.del('n', '<C-k>', { buffer = bufnr })
+
   -- override default mappings
   vim.keymap.set('n', '<C-i>', api.node.show_info_popup, opts('Info'))
 end

@@ -9,6 +9,7 @@ Plug 'windwp/nvim-autopairs' -- auto pairs ) } ]
 Plug 'mbbill/undotree' -- track file change
 Plug 'tpope/vim-fugitive' -- git handle
 Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'}) -- highlight syntax in code
+Plug 'HiPhish/rainbow-delimiters.nvim' -- rainbow parentheses
 
 -- telescope is a highly extendable fuzzy finder over lists
 Plug 'nvim-lua/plenary.nvim'

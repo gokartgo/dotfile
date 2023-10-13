@@ -31,9 +31,17 @@ keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 
+-- Clear search text
+keymap("n", "<leader><leader>", ":let @/ = \"\"<CR>", opts)
+
+-- Visual
 -- Move text up and down and auto adjust indent
 keymap("v", "<S-k>", ":move-2<CR>gv=gv", opts)
 keymap("v", "<S-j>", ":move'>+<CR>gv=gv", opts)
+
+-- Tab multiple line
+keymap("v", "<", "<gv", opts)
+keymap("v", ">", ">gv", opts)
 
 -- Replace Without Copy Deleted Word
 keymap("v", "p", '"_dP', opts)
@@ -46,7 +54,4 @@ keymap("v", "<leader>f", "y/<C-r>\"<CR>", opts)
 
 -- Replace all selected text
 keymap("v", "<leader>ra", "y:%s/<C-r>\"/", opts)
-
--- Clear search text
-keymap("n", "<leader><leader>", ":let @/ = \"\"<CR>", opts)
 

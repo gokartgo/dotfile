@@ -1,10 +1,10 @@
-dofile(os.getenv("HOME") .. "/.dotfiles/.config/nvim/vim-plug.lua")
-dofile(os.getenv("HOME") .. "/.dotfiles/.config/nvim/nvim-tree-conf.lua")
-dofile(os.getenv("HOME") .. "/.dotfiles/.config/nvim/wilder.lua")
-dofile(os.getenv("HOME") .. "/.dotfiles/.config/nvim/nvim-autopairs.lua")
-dofile(os.getenv("HOME") .. "/.dotfiles/.config/nvim/nvim-treesitter.lua")
-
+require "plugin.vim-plug"
+require "plugin.nvim-tree-conf"
+require "plugin.wilder"
+require "plugin.nvim-autopairs"
+require "plugin.nvim-treesitter"
 require "plugin.colorscheme"
+
 require "user.options"
 require "user.keymaps"
 

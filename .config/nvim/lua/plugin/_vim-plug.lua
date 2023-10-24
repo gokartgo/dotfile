@@ -28,5 +28,16 @@ Plug 'ThePrimeagen/harpoon'
   end
 Plug('gelguy/wilder.nvim', { ['do'] = vim.fn['UpdateRemotePlugins'] })
 
+-- nvim cmp plugins
+Plug 'hrsh7th/nvim-cmp' -- the completions plugins
+Plug 'hrsh7th/cmp-buffer' -- buffer completions
+Plug 'hrsh7th/cmp-path' -- path completions
+Plug 'hrsh7th/cmp-cmdline' -- cmdline completions
+
+-- snippets
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+Plug "rafamadriz/friendly-snippets" -- snippets plugin to support many language
+
 vim.call('plug#end')
 

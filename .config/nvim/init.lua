@@ -5,6 +5,7 @@ require "plugin.nvim-cmp"
 require "plugin.nvim-tree-conf"
 require "plugin.nvim-treesitter"
 require "plugin.wilder"
+require "plugin.lsp"
 
 require "user.options"
 require "user.keymaps"

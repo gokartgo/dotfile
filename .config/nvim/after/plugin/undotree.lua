@@ -1,3 +1,8 @@
+if vim.fn.exists(':UndotreeToggle') == 0 then
+  vim.notify("undotree not found")
+  return 
+end
+
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
 
 vim.opt.swapfile = false                          -- disable default vim backup because we use from undotree plugin

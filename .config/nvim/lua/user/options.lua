@@ -16,3 +16,15 @@ vim.opt.statusline = 'col: %c %=file: %f '        -- set show column number in s
 
 vim.cmd [[set iskeyword+=-]]                      -- when use delete word (dw) it will include with - to be in word
 
+
+if vim.fn.has 'termguicolors' == 1 then
+  vim.opt.termguicolors = true                    -- set termguicolors to enable highlight groups
+  vim.opt.syntax = enable 
+end
+
+-- setup for nvim-tree-conf
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+

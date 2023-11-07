@@ -1,4 +1,10 @@
-local wilder = require('wilder')
+local wilder_status_ok, wilder = pcall(require, "wilder")
+
+if not wilder_status_ok then
+  vim.notify("wilder not found")
+  return
+end
+
 -- Default keys
 wilder.setup({
   modes = {':', '/', '?'},

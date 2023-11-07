@@ -1,9 +1,9 @@
--- disable netrw at the very start of your init.lua (strongly advised)
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+local nvim_tree_status_ok, nvim_tree = pcall(require, "nvim-tree")
 
--- set termguicolors to enable highlight groups
-vim.opt.termguicolors = true
+if not nvim_tree_status_ok then
+  vim.notify("nvim-tree not found")
+  return
+end
 
 local function custom_on_attach(bufnr)
   local api = require('nvim-tree.api')
@@ -16,10 +16,10 @@ local function custom_on_attach(bufnr)
   api.config.mappings.default_on_attach(bufnr)
 
   -- remove a default
-  vim.keymap.del('n', '<C-k>', { buffer = bufnr })
+  vim.keymap.del('n', '<C-k>', { buffer = bufnr }) -- remove show file info
 
   -- override default mappings
-  vim.keymap.set('n', '<C-i>', api.node.show_info_popup, opts('Info'))
+  vim.keymap.set('n', '<C-i>', api.node.show_info_popup, opts('Info')) -- show file info
 end
 
 -- OR setup with some options

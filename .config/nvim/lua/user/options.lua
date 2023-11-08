@@ -14,17 +14,18 @@ vim.opt.incsearch = true
 
 vim.opt.statusline = 'col: %c %=file: %f '        -- set show column number in status line
 
+vim.opt.updatetime = 300                          -- set for lsp highlight to make it faster
+
 vim.cmd [[set iskeyword+=-]]                      -- when use delete word (dw) it will include with - to be in word
 
 
 if vim.fn.has 'termguicolors' == 1 then
   vim.opt.termguicolors = true                    -- set termguicolors to enable highlight groups
-  vim.opt.syntax = enable 
+  vim.opt.syntax = 'enable'
 end
 
 -- setup for nvim-tree-conf
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
-
 

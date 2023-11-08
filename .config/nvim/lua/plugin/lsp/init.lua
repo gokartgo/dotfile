@@ -6,3 +6,4 @@ if not lspconfig_status_ok then
 end
 
 require "plugin.lsp.mason"
+require ("plugin.lsp.handlers").setup()

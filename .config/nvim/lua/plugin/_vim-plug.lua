@@ -33,6 +33,7 @@ Plug 'hrsh7th/nvim-cmp' -- the completions plugins
 Plug 'hrsh7th/cmp-buffer' -- buffer completions
 Plug 'hrsh7th/cmp-path' -- path completions
 Plug 'hrsh7th/cmp-cmdline' -- cmdline completions
+Plug 'hrsh7th/cmp-nvim-lua' -- cmp nvim lua api
 
 -- snippets
 Plug 'L3MON4D3/LuaSnip'

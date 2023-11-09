@@ -1,6 +1,10 @@
 local Plug = vim.fn['plug#']
+local vim_plug_status_ok, _ = pcall(vim.call, 'plug#begin', vim.fn.stdpath('data') .. '/plugged')
 
-vim.call('plug#begin', vim.fn.stdpath('data') .. '/plugged')
+if not vim_plug_status_ok then
+  vim.notify("Vim Plug not found")
+  return
+end
 
 Plug 'mhartington/oceanic-next' -- theme
 Plug 'nvim-tree/nvim-web-devicons' -- optional, for file icons
@@ -20,7 +24,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
 
 -- auto complete in Ex commands
-  function UpdateRemotePlugins(...)
+  function UpdateRemotePlugins()
     -- Needed to refresh runtime files
     vim.cmd('let &rtp=&rtp')
     -- Run :UpdateRemotePlugins

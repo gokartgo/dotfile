@@ -1,6 +1,7 @@
 local servers = {
+	"jsonls",   -- node version >= 14
   "lua_ls",
-	"jsonls",
+  "tsserver", -- node version >= 14
 }
 
 local settings = {

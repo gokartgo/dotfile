@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local keymap = vim.api.nvim_set_keymap
+local keymap = vim.keymap.set
 
 -- Remap Space as Leader Key
 keymap("", "<Space>", "<Nop>", opts)
@@ -55,3 +55,5 @@ keymap("v", "<leader>f", "y/<C-r>\"<CR>", opts)
 -- Replace all selected text
 keymap("v", "<leader>ra", "y:%s/<C-r>\"/", opts)
 
+-- change camel case to snake case
+keymap("v", "<leader>cs", ":s/\\<\\u\\+\\|\\l\\u/\\= join(split(tolower(submatch(0)), '\\zs'), '_')/g<CR>", opts)

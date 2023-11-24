@@ -52,8 +52,12 @@ keymap("n", "J", "mzJ`z", opts)
 -- Search selected text
 keymap("v", "<leader>f", "y/<C-r>\"<CR>", opts)
 
--- Replace all selected text
-keymap("v", "<leader>ra", "y:%s/<C-r>\"/", opts)
+keymap("v", "<leader>ra", function()
+  local text = vim.fn.input("Replace Text: ")
+  vim.cmd('noautocmd normal! y')              -- yank select value
+  local yank_value = vim.fn.getreg('"')       -- get current yank value
+  vim.cmd('%s/' .. yank_value .. '/' .. text) -- replace select value with text input
+end, opts)
 
 -- change camel case to snake case
 keymap("v", "<leader>cs", ":s/\\<\\u\\+\\|\\l\\u/\\= join(split(tolower(submatch(0)), '\\zs'), '_')/g<CR>", opts)

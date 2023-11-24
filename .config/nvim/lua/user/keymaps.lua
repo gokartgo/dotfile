@@ -34,6 +34,13 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 -- Clear search text
 keymap("n", "<leader><leader>", ":let @/ = \"\"<CR>", opts)
 
+-- Join line without move cursor
+keymap("n", "J", "mzJ`z", opts)
+
+-- switch tab
+keymap("n", "<C-[>", ":tabprevious<CR>", opts)
+keymap("n", "<C-]>", ":tabnext<CR>", opts)
+
 -- Visual
 -- Move text up and down and auto adjust indent
 keymap("v", "<S-k>", ":move-2<CR>gv=gv", opts)
@@ -45,9 +52,6 @@ keymap("v", ">", ">gv", opts)
 
 -- Replace Without Copy Deleted Word
 keymap("v", "p", '"_dP', opts)
-
--- Join line without move cursor
-keymap("n", "J", "mzJ`z", opts)
 
 -- Search selected text
 keymap("v", "<leader>f", "y/<C-r>\"<CR>", opts)

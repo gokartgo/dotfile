@@ -12,6 +12,8 @@ Plug 'nvim-tree/nvim-tree.lua' -- file explorer
 Plug 'windwp/nvim-autopairs' -- auto pairs ) } ]
 Plug 'mbbill/undotree' -- track file change
 Plug 'tpope/vim-fugitive' -- git handle
+
+-- nvim-treesitter
 Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'}) -- highlight syntax in code
 Plug 'HiPhish/rainbow-delimiters.nvim' -- rainbow parentheses
 

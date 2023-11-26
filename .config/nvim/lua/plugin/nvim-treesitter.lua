@@ -7,7 +7,7 @@ end
 
 nvim_treesitter.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { 
+  ensure_installed = {
     "css",
     "dockerfile",
     "html",
@@ -17,7 +17,7 @@ nvim_treesitter.setup {
     "query",
     "scss",
     "typescript",
-    "yaml" 
+    "yaml"
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
@@ -26,7 +26,7 @@ nvim_treesitter.setup {
   -- Automatically install missing parsers when entering buffer
   -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
   auto_install = true,
-  
+
   highlight = {
     enable = true,
 
@@ -36,4 +36,8 @@ nvim_treesitter.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = false,
   },
+  indent = {
+    enable = true,
+  }
 }
+

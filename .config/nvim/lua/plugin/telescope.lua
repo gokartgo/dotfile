@@ -22,6 +22,17 @@ telescope.setup {
         ["<C-u>"] = actions.preview_scrolling_up,
         ["<C-d>"] = actions.preview_scrolling_down,
         ["<C-t>"] = actions.select_tab,
+        ["<C-o>"] = actions.send_selected_to_qflist + actions.open_qflist,
+      },
+      n = {
+        ["<C-h>"] = actions.cycle_history_prev,
+        ["<C-l>"] = actions.cycle_history_next,
+        ["<C-k>"] = actions.move_selection_previous,
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-u>"] = actions.preview_scrolling_up,
+        ["<C-d>"] = actions.preview_scrolling_down,
+        ["<C-t>"] = actions.select_tab,
+        ["<C-o>"] = actions.send_selected_to_qflist + actions.open_qflist,
       }
     }
   }

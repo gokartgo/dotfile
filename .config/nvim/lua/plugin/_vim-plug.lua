@@ -25,15 +25,6 @@ Plug('nvim-telescope/telescope.nvim', { tag = '0.1.2' })
 Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
 
--- auto complete in Ex commands
-  function UpdateRemotePlugins()
-    -- Needed to refresh runtime files
-    vim.cmd('let &rtp=&rtp')
-    -- Run :UpdateRemotePlugins
-    vim.cmd('UpdateRemotePlugins')
-  end
-Plug('gelguy/wilder.nvim', { ['do'] = vim.fn['UpdateRemotePlugins'] })
-
 -- nvim cmp plugins
 Plug 'hrsh7th/nvim-cmp' -- the completions plugins
 Plug 'hrsh7th/cmp-buffer' -- buffer completions

@@ -29,3 +29,4 @@ end
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+vim.opt.wildmenu = false                          -- disable wildmenu because we use cmp-cmdline plugin to show suggestion in ex command mode

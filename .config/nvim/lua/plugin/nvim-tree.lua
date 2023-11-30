@@ -12,7 +12,7 @@ local function custom_on_attach(bufnr)
     return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
 
-  -- use all default mappings 
+  -- use all default mappings
   api.config.mappings.default_on_attach(bufnr)
 
   -- remove a default
@@ -31,6 +31,26 @@ require("nvim-tree").setup({
   on_attach = custom_on_attach,
   renderer = {
     group_empty = true,
+    icons = {
+      web_devicons = {
+        file = {
+          enable = true,
+          color = true,
+        },
+        folder = {
+          enable = false,
+          color = true,
+        },
+      },
+      glyphs = {
+        default = "",
+        symlink = "",
+        bookmark = "",
+        folder = {
+          arrow_closed = "▶",
+          arrow_open = "▼",
+        },
+      },
+    },
   },
 })
-

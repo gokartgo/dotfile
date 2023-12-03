@@ -4,10 +4,14 @@ require "util.index"
 
 require "plugin._vim-plug"
 require "plugin.colorscheme"
+require "plugin.fugitive"
+require "plugin.harpoon"
 require "plugin.nvim-autopairs"
 require "plugin.nvim-cmp"
 require "plugin.nvim-tree"
 require "plugin.nvim-treesitter"
+require "plugin.rainbow-delimiters"
 require "plugin.telescope"
+
 require "plugin.lsp"
 

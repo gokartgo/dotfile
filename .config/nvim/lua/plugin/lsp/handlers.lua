@@ -80,9 +80,21 @@ local function lsp_keymaps(bufnr)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 end
 
-M.on_attach = function(client, bufnr)
-  lsp_keymaps(bufnr)
-  lsp_highlight_document(client)
+local function lsp_custom_attach(server, client, bufnr)
+  local status_ok, settings = pcall(require, "plugin.lsp.settings." .. server)
+  if status_ok then
+    if settings ~= nil and settings.on_attach ~= nil then
+      settings.on_attach(client, bufnr)
+    end
+  end
+end
+
+M.on_attach = function(server)
+  return function(client, bufnr)
+    lsp_keymaps(bufnr)
+    lsp_highlight_document(client)
+    lsp_custom_attach(server, client, bufnr)
+  end
 end
 
 local status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")

@@ -1,4 +1,5 @@
 local servers = {
+  "eslint",
 	"jsonls",   -- node version >= 14
   "lua_ls",
   "tsserver", -- node version >= 14
@@ -32,7 +33,7 @@ local opts = {}
 
 for _, server in pairs(servers) do
 	opts = {
-		on_attach = require("plugin.lsp.handlers").on_attach,
+		on_attach = require("plugin.lsp.handlers").on_attach(server),
 		capabilities = require("plugin.lsp.handlers").capabilities,
 	}
 

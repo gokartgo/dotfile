@@ -6,16 +6,18 @@ if not vim_plug_status_ok then
   return
 end
 
-Plug 'mhartington/oceanic-next' -- theme
+Plug 'mhartington/oceanic-next'    -- theme
 Plug 'nvim-tree/nvim-web-devicons' -- optional, for file icons
-Plug 'nvim-tree/nvim-tree.lua' -- file explorer
-Plug 'windwp/nvim-autopairs' -- auto pairs ) } ]
-Plug 'mbbill/undotree' -- track file change
-Plug 'tpope/vim-fugitive' -- git handle
+Plug 'nvim-tree/nvim-tree.lua'     -- file explorer
+Plug 'windwp/nvim-autopairs'       -- auto pairs ) } ]
+Plug 'mbbill/undotree'             -- track file change
+Plug 'tpope/vim-fugitive'          -- git handle
+Plug 'numToStr/Comment.nvim'       -- comment helper
 
 -- nvim-treesitter
-Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'}) -- highlight syntax in code
-Plug 'HiPhish/rainbow-delimiters.nvim' -- rainbow parentheses
+Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }) -- highlight syntax in code
+Plug 'HiPhish/rainbow-delimiters.nvim'                         -- rainbow parentheses
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'             -- comment advanced
 
 -- telescope is a highly extendable fuzzy finder over lists
 Plug 'nvim-lua/plenary.nvim'
@@ -26,10 +28,10 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
 
 -- nvim cmp plugins
-Plug 'hrsh7th/nvim-cmp' -- the completions plugins
-Plug 'hrsh7th/cmp-buffer' -- buffer completions
-Plug 'hrsh7th/cmp-path' -- path completions
-Plug 'hrsh7th/cmp-cmdline' -- cmdline completions
+Plug 'hrsh7th/nvim-cmp'     -- the completions plugins
+Plug 'hrsh7th/cmp-buffer'   -- buffer completions
+Plug 'hrsh7th/cmp-path'     -- path completions
+Plug 'hrsh7th/cmp-cmdline'  -- cmdline completions
 Plug 'hrsh7th/cmp-nvim-lua' -- cmp nvim lua api
 
 -- snippets
@@ -38,11 +40,10 @@ Plug 'saadparwaiz1/cmp_luasnip'
 Plug "rafamadriz/friendly-snippets" -- snippets plugin to support many language
 
 -- lsp
-Plug 'hrsh7th/cmp-nvim-lsp' -- use with nvim cmp plugins
-Plug 'neovim/nvim-lspconfig' -- enable LSP
-Plug 'williamboman/mason.nvim' -- simple to use language server installer
+Plug 'hrsh7th/cmp-nvim-lsp'              -- use with nvim cmp plugins
+Plug 'neovim/nvim-lspconfig'             -- enable LSP
+Plug 'williamboman/mason.nvim'           -- simple to use language server installer
 Plug 'williamboman/mason-lspconfig.nvim' -- simple to use language server installer
-Plug 'jose-elias-alvarez/null-ls.nvim' -- LSP diagnostics and code actions
+Plug 'jose-elias-alvarez/null-ls.nvim'   -- LSP diagnostics and code actions
 
 vim.call('plug#end')
-

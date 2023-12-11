@@ -17,9 +17,12 @@ local function custom_on_attach(bufnr)
 
   -- remove a default
   vim.keymap.del('n', '<C-k>', { buffer = bufnr }) -- remove show file info
+  vim.keymap.del('n', '<C-]>', { buffer = bufnr }) -- remove change directory
 
   -- override default mappings
-  vim.keymap.set('n', '<C-i>', api.node.show_info_popup, opts('Info')) -- show file info
+  vim.keymap.set('n', '<C-i>', api.node.show_info_popup, opts('Info'))     -- show file info
+  vim.keymap.set('n', '>', api.tree.change_root_to_node, opts('CD'))   -- change directory
+  vim.keymap.set('n', '<', api.tree.change_root_to_parent, opts('Up')) -- change directory
 end
 
 -- OR setup with some options

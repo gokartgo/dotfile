@@ -4,7 +4,7 @@ require "util.index"
 
 require "plugin._vim-plug"
 require "plugin.colorscheme"
-require "plugin.fugitive"
+require "plugin.comment"
 require "plugin.harpoon"
 require "plugin.nvim-autopairs"
 require "plugin.nvim-cmp"

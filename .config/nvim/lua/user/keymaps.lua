@@ -53,9 +53,6 @@ keymap("v", ">", ">gv", opts)
 -- Replace Without Copy Deleted Word
 keymap("v", "p", '"_dP', opts)
 
--- Search selected text
-keymap("v", "<leader>f", "y/<C-r>\"<CR>", opts)
-
 keymap("v", "<leader>ra", function()
   local text = vim.fn.input("Replace Text: ")
   vim.cmd('noautocmd normal! y')              -- yank select value

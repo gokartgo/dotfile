@@ -11,8 +11,11 @@ Plug 'nvim-tree/nvim-web-devicons' -- optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua'     -- file explorer
 Plug 'windwp/nvim-autopairs'       -- auto pairs ) } ]
 Plug 'mbbill/undotree'             -- track file change
-Plug 'tpope/vim-fugitive'          -- git handle
 Plug 'numToStr/Comment.nvim'       -- comment helper
+
+-- git
+Plug 'tpope/vim-fugitive'      -- git handle
+Plug 'lewis6991/gitsigns.nvim' -- git sign
 
 -- nvim-treesitter
 Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }) -- highlight syntax in code
@@ -21,7 +24,7 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'             -- comment advanc
 
 -- telescope is a highly extendable fuzzy finder over lists
 Plug 'nvim-lua/plenary.nvim'
-Plug('nvim-telescope/telescope.nvim', { tag = '0.1.2' })
+Plug('nvim-telescope/telescope.nvim', { tag = '0.1.4' })
 
 -- harpoon is use for navigate to file that you opened before
 Plug 'nvim-lua/plenary.nvim'

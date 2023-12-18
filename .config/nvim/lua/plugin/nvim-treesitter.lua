@@ -10,6 +10,7 @@ nvim_treesitter.setup {
   ensure_installed = {
     "css",
     "dockerfile",
+    "gitcommit",
     "html",
     "javascript",
     "json",
@@ -17,6 +18,7 @@ nvim_treesitter.setup {
     "query",
     "scss",
     "typescript",
+    "vim",
     "yaml"
   },
 

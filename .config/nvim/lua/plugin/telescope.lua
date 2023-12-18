@@ -20,6 +20,7 @@ end
 
 telescope.setup {
   defaults = {
+    initial_mode = "normal",
     mappings = {
       i = {
         ["<C-h>"] = actions.cycle_history_prev,

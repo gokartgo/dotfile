@@ -20,7 +20,7 @@ local function custom_on_attach(bufnr)
   vim.keymap.del('n', '<C-]>', { buffer = bufnr }) -- remove change directory
 
   -- override default mappings
-  vim.keymap.set('n', '<C-i>', api.node.show_info_popup, opts('Info'))     -- show file info
+  vim.keymap.set('n', '<C-i>', api.node.show_info_popup, opts('Info')) -- show file info
   vim.keymap.set('n', '>', api.tree.change_root_to_node, opts('CD'))   -- change directory
   vim.keymap.set('n', '<', api.tree.change_root_to_parent, opts('Up')) -- change directory
 end
@@ -55,5 +55,10 @@ require("nvim-tree").setup({
         },
       },
     },
+  },
+  update_focused_file = {
+    enable = true,
+    update_root = false,
+    ignore_list = {},
   },
 })

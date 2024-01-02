@@ -3,6 +3,7 @@ local servers = {
 	"jsonls",   -- node version >= 14
   "lua_ls",
   "tsserver", -- node version >= 14
+  "yamlls",
 }
 
 local settings = {

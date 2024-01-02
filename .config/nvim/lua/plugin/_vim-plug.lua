@@ -18,9 +18,9 @@ Plug 'tpope/vim-fugitive'      -- git handle
 Plug 'lewis6991/gitsigns.nvim' -- git sign
 
 -- nvim-treesitter
-Plug('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }) -- highlight syntax in code
-Plug 'HiPhish/rainbow-delimiters.nvim'                         -- rainbow parentheses
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'             -- comment advanced
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- highlight syntax in code
+Plug 'HiPhish/rainbow-delimiters.nvim'                            -- rainbow parentheses
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'                -- comment advanced
 
 -- telescope is a highly extendable fuzzy finder over lists
 Plug 'nvim-lua/plenary.nvim'

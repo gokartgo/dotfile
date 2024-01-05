@@ -55,9 +55,9 @@ keymap("v", "p", '"_dP', opts)
 
 keymap("v", "<leader>ra", function()
   local text = vim.fn.input("Replace Text: ")
-  vim.cmd('noautocmd normal! y')              -- yank select value
-  local yank_value = vim.fn.getreg('"')       -- get current yank value
-  vim.cmd('%s/' .. yank_value .. '/' .. text) -- replace select value with text input
+  vim.cmd('noautocmd normal! y')                      -- yank select value
+  local yank_value = vim.fn.getreg('"')               -- get current yank value
+  vim.cmd('%s/' .. yank_value .. '/' .. text .. '/g') -- replace select value with text input
 end, opts)
 
 -- change camel case to snake case

@@ -21,6 +21,7 @@ end
 telescope.setup {
   defaults = {
     initial_mode = "normal",
+    path_display = { "smart" },
     mappings = {
       i = {
         ["<C-h>"] = actions.cycle_history_prev,
@@ -48,6 +49,7 @@ telescope.setup {
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fs', function()
   local text = vim.fn.input({ prompt = "Find Text: " })
 
@@ -55,7 +57,21 @@ vim.keymap.set('n', '<leader>fs', function()
     builtin.grep_string({ search = text })
   end
 end)
+
 vim.keymap.set('v', '<leader>fs', function()
   local text = vim.g.get_visual_selection()
   builtin.grep_string({ search = text })
+end)
+
+vim.keymap.set('n', '<leader>fms', function()
+  local text = vim.fn.input({ prompt = "Find Text: " })
+
+  if text ~= nil and text ~= '' then
+    builtin.grep_string({ search = text, word_match = '-w' })
+  end
+end)
+
+vim.keymap.set('v', '<leader>fms', function()
+  local text = vim.g.get_visual_selection()
+  builtin.grep_string({ search = text, word_match = '-w' })
 end)

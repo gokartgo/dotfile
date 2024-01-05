@@ -22,12 +22,11 @@ Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- highlight s
 Plug 'HiPhish/rainbow-delimiters.nvim'                            -- rainbow parentheses
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'                -- comment advanced
 
+Plug 'nvim-lua/plenary.nvim' -- extension for telescope, harpoon
 -- telescope is a highly extendable fuzzy finder over lists
-Plug 'nvim-lua/plenary.nvim'
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.4' })
 
 -- harpoon is use for navigate to file that you opened before
-Plug 'nvim-lua/plenary.nvim'
 Plug 'ThePrimeagen/harpoon'
 
 -- nvim cmp plugins

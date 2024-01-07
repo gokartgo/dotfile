@@ -11,7 +11,6 @@ require "plugin.nvim-autopairs"
 require "plugin.nvim-cmp"
 require "plugin.nvim-tree"
 require "plugin.nvim-treesitter"
-require "plugin.nvim-web-devicons"
 require "plugin.rainbow-delimiters"
 require "plugin.telescope"
 

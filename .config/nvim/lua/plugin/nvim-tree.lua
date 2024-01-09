@@ -29,7 +29,7 @@ end
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   view = {
-    width = 30,
+    width = 40,
   },
   on_attach = custom_on_attach,
   renderer = {
@@ -61,4 +61,7 @@ require("nvim-tree").setup({
     update_root = false,
     ignore_list = {},
   },
+  filters = {
+    custom = { "^\\.git$" }
+  }
 })

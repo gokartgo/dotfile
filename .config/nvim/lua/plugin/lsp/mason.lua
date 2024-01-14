@@ -2,6 +2,7 @@ local servers = {
   "eslint",
 	"jsonls",   -- node version >= 14
   "lua_ls",
+  "terraformls",
   "tsserver", -- node version >= 14
   "yamlls",
 }

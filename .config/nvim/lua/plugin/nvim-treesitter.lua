@@ -17,6 +17,7 @@ nvim_treesitter.setup {
     "lua",
     "query",
     "scss",
+    "terraform",
     "tsx",
     "typescript",
     "vim",

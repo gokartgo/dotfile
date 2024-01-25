@@ -6,6 +6,9 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- Terminal
+keymap("t", "<Esc>", "<C-\\><C-n>", opts)
+
 -- Normal
 -- Better Window Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -53,6 +56,14 @@ keymap("v", ">", ">gv", opts)
 -- Replace Without Copy Deleted Word
 keymap("v", "p", '"_dP', opts)
 
+-- Find selected word in file
+keymap("v", "<leader>fl", function()
+  vim.cmd('noautocmd normal! y')                      -- yank select value
+  local yank_value = vim.fn.getreg('"')               -- get current yank value
+  vim.cmd('/\\c' .. yank_value) -- replace select value with text input
+end, opts)
+
+-- Replace selected word in file
 keymap("v", "<leader>ra", function()
   local text = vim.fn.input("Replace Text: ")
   vim.cmd('noautocmd normal! y')                      -- yank select value

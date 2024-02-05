@@ -21,8 +21,9 @@ Plug 'lewis6991/gitsigns.nvim' -- git sign
 Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- highlight syntax in code
 Plug 'HiPhish/rainbow-delimiters.nvim'                            -- rainbow parentheses
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'                -- comment advanced
+Plug 'windwp/nvim-ts-autotag'                                     -- auto close html tag
 
-Plug 'nvim-lua/plenary.nvim' -- extension for telescope, harpoon
+Plug 'nvim-lua/plenary.nvim'                                      -- extension for telescope, harpoon
 -- telescope is a highly extendable fuzzy finder over lists
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.4' })
 

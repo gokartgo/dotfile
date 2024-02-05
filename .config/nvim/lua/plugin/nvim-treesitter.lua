@@ -44,6 +44,9 @@ nvim_treesitter.setup {
   indent = {
     enable = true,
     disable = {},
+  },
+  autotag = {
+    enable = true,
   }
 }
 

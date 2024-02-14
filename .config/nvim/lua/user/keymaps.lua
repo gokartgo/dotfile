@@ -19,7 +19,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 -- Split Window
 keymap("n", "<leader>h", "<C-w>v", opts) -- Split window horizontal
 keymap("n", "<leader>v", "<C-w>s", opts) -- Split window vertical
-keymap("n", "<leader>q", "<C-w>q", opts) -- Quit current window
+keymap("n", "<leader>w", "<C-w>q", opts) -- Quit current window
 
 -- Toggle Explore from NvimTree Plugin
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
@@ -33,6 +33,9 @@ keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate Buffer
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
+
+-- Remove current Buffer
+keymap("n", "<leader>q", ":bprevious|bdelete #<CR>", opts) -- Quit current window
 
 -- Clear search text
 keymap("n", "<leader><leader>", ":let @/ = \"\"<CR>", opts)

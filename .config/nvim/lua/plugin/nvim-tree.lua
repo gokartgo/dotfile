@@ -26,7 +26,7 @@ local function custom_on_attach(bufnr)
 end
 
 -- OR setup with some options
-require("nvim-tree").setup({
+nvim_tree.setup({
   sort_by = "case_sensitive",
   view = {
     width = 40,
@@ -65,3 +65,10 @@ require("nvim-tree").setup({
     custom = { "^\\.git$" }
   }
 })
+
+vim.api.nvim_exec(
+[[
+autocmd BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if &filetype == 'NvimTree' | set laststatus=0 | else | set laststatus=3 | endif
+]],
+false
+)

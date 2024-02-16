@@ -47,6 +47,9 @@ keymap("n", "J", "mzJ`z", opts)
 keymap("n", "<C-[>", ":tabprevious<CR>", opts)
 keymap("n", "<C-]>", ":tabnext<CR>", opts)
 
+keymap("n", "<leader>nt", ":tabnew<CR>", opts)   -- new tab
+keymap("n", "<leader>ct", ":tabclose<CR>", opts) -- close tab
+
 -- Visual
 -- Move text up and down and auto adjust indent
 keymap("v", "<S-k>", ":move-2<CR>gv=gv", opts)
@@ -61,9 +64,9 @@ keymap("v", "p", '"_dP', opts)
 
 -- Find selected word in file
 keymap("v", "<leader>fl", function()
-  vim.cmd('noautocmd normal! y')                      -- yank select value
-  local yank_value = vim.fn.getreg('"')               -- get current yank value
-  vim.cmd('/\\c' .. yank_value) -- replace select value with text input
+  vim.cmd('noautocmd normal! y')        -- yank select value
+  local yank_value = vim.fn.getreg('"') -- get current yank value
+  vim.cmd('/\\c' .. yank_value)         -- replace select value with text input
 end, opts)
 
 -- Replace selected word in file

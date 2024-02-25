@@ -43,7 +43,17 @@ telescope.setup {
         ["<C-t>"] = actions.select_tab,
         ["<C-o>"] = actions.send_selected_to_qflist + actions.open_qflist,
       }
-    }
+    },
+    layout_strategy = 'vertical',
+    layout_config = {
+      vertical = {
+        height = 0.99,
+        preview_cutoff = 1,
+        preview_height = 0.6,
+        prompt_position = "bottom",
+        width = 0.99
+      }
+    },
   }
 }
 

@@ -17,7 +17,6 @@ if not builtin_status_ok then
   return
 end
 
-
 telescope.setup {
   defaults = {
     initial_mode = "normal",
@@ -54,8 +53,19 @@ telescope.setup {
         width = 0.99
       }
     },
-  }
+  },
+  extensions = {
+    media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = { "png", "webp", "jpg", "jpeg", "svg" },
+      -- find command (defaults to `fd`)
+      find_cmd = "rg"
+    }
+  },
 }
+
+telescope.load_extension('media_files')
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.git_files, {})

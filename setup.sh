@@ -6,6 +6,8 @@
 # brew install neovim
 ### ripgrep use with telescope
 # brew install ripgrep
+### chafa use with telescope telescope-media-files
+# brew install chafa
 ### neo vim plug
 # curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 # nvim +PlugInstall +qall

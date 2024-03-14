@@ -23,9 +23,11 @@ Plug 'HiPhish/rainbow-delimiters.nvim'                            -- rainbow par
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'                -- comment advanced
 Plug 'windwp/nvim-ts-autotag'                                     -- auto close html tag
 
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'                                      -- extension for telescope, harpoon
 -- telescope is a highly extendable fuzzy finder over lists
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.4' })
+Plug 'nvim-telescope/telescope-media-files.nvim'
 
 -- harpoon is use for navigate to file that you opened before
 Plug 'ThePrimeagen/harpoon'

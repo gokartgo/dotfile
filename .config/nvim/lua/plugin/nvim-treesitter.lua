@@ -9,6 +9,7 @@ nvim_treesitter.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = {
     "css",
+    "c_sharp",
     "dockerfile",
     "gitcommit",
     "html",

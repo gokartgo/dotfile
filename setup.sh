@@ -8,6 +8,8 @@
 # brew install ripgrep
 ### chafa use with telescope telescope-media-files
 # brew install chafa
+### dotnet for omnisharp lsp
+# brew install dotnet
 ### neo vim plug
 # curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 # nvim +PlugInstall +qall

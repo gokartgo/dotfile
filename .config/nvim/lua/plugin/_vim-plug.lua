@@ -18,13 +18,21 @@ Plug 'tpope/vim-fugitive'      -- git handle
 Plug 'lewis6991/gitsigns.nvim' -- git sign
 
 -- nvim-treesitter
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' }) -- highlight syntax in code
-Plug 'HiPhish/rainbow-delimiters.nvim'                            -- rainbow parentheses
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'                -- comment advanced
-Plug 'windwp/nvim-ts-autotag'                                     -- auto close html tag
+Plug('nvim-treesitter/nvim-treesitter', { tag = 'v0.9.1' }) -- highlight syntax in code
+Plug 'HiPhish/rainbow-delimiters.nvim'                      -- rainbow parentheses
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'          -- comment advanced
+Plug 'windwp/nvim-ts-autotag'                               -- auto close html tag
 
 Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'                                      -- extension for telescope, harpoon
+Plug 'nvim-lua/plenary.nvim' -- extension for telescope, harpoon, neotest
+
+-- neotest
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'nvim-neotest/neotest'
+Plug('nvim-neotest/neotest-jest', { commit = 'c211844' }) -- plugin for jest
+Plug 'marilari88/neotest-vitest'                          -- plugin for vitest
+
 -- telescope is a highly extendable fuzzy finder over lists
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.4' })
 Plug 'nvim-telescope/telescope-media-files.nvim'

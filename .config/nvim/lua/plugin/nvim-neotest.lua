@@ -1,13 +1,7 @@
 local neotest_status_ok, neotest = pcall(require, "neotest")
-local neojest_status_ok, neojest = pcall(require, "neotest-jest")
 
 if not neotest_status_ok then
   vim.notify("nvim-neotest not found")
-  return
-end
-
-if not neojest_status_ok then
-  vim.notify("neojest not found")
   return
 end
 
@@ -19,7 +13,6 @@ neotest.setup({
       jestConfigFile = "jest.config.js",
       env = { CI = true },
       cwd = function(path)
-        print(path)
         return vim.fn.getcwd()
       end,
     }),
@@ -30,3 +23,8 @@ neotest.setup({
     })
   }
 })
+
+vim.keymap.set("n", "<leader>tr", function() neotest.run.run() end)
+vim.keymap.set("n", "<leader>tf", function() neotest.run.run(vim.fn.expand("%")) end)
+vim.keymap.set("n", "<leader>te", function() neotest.summary.toggle() end)
+

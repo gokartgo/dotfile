@@ -62,6 +62,8 @@ nvim_tree.setup({
     ignore_list = {},
   },
   filters = {
+    enable = true,
+    git_ignored = false,
     custom = { "^\\.git$" }
   }
 })

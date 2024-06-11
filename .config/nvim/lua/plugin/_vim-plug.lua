@@ -29,12 +29,12 @@ Plug 'nvim-lua/plenary.nvim' -- extension for telescope, harpoon, neotest
 -- neotest
 Plug 'antoinemadec/FixCursorHold.nvim'
 Plug 'nvim-neotest/nvim-nio'
-Plug 'nvim-neotest/neotest'
+Plug('nvim-neotest/neotest', { tag = 'v5.2.1' })
 Plug('nvim-neotest/neotest-jest', { commit = 'c211844' }) -- plugin for jest
 Plug 'marilari88/neotest-vitest'                          -- plugin for vitest
 
 -- telescope is a highly extendable fuzzy finder over lists
-Plug('nvim-telescope/telescope.nvim', { tag = '0.1.4' })
+Plug('nvim-telescope/telescope.nvim')
 Plug 'nvim-telescope/telescope-media-files.nvim'
 
 -- harpoon is use for navigate to file that you opened before

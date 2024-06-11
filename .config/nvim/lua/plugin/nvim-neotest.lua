@@ -27,4 +27,5 @@ neotest.setup({
 vim.keymap.set("n", "<leader>tr", function() neotest.run.run() end)
 vim.keymap.set("n", "<leader>tf", function() neotest.run.run(vim.fn.expand("%")) end)
 vim.keymap.set("n", "<leader>te", function() neotest.summary.toggle() end)
-
+vim.keymap.set("n", "<leader>to", function() neotest.output_panel.toggle() end)
+vim.keymap.set("n", "<leader>tc", function() neotest.output_panel.clear() end)

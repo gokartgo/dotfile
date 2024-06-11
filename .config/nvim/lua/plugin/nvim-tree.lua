@@ -61,6 +61,22 @@ nvim_tree.setup({
     update_root = false,
     ignore_list = {},
   },
+  diagnostics = {
+    enable = true,
+    show_on_dirs = false,
+    show_on_open_dirs = true,
+    debounce_delay = 50,
+    severity = {
+      min = vim.diagnostic.severity.HINT,
+      max = vim.diagnostic.severity.ERROR,
+    },
+    icons = {
+      hint = "",
+      info = "",
+      warning = "",
+      error = "",
+    },
+  },
   filters = {
     enable = true,
     git_ignored = false,
@@ -69,8 +85,8 @@ nvim_tree.setup({
 })
 
 vim.api.nvim_exec(
-[[
+  [[
 autocmd BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if &filetype == 'NvimTree' | set laststatus=0 | else | set laststatus=3 | endif
 ]],
-false
+  false
 )

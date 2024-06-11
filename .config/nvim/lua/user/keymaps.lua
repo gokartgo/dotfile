@@ -65,18 +65,20 @@ keymap("v", "p", '"_dP', opts)
 
 -- Find selected word in file
 keymap("v", "<leader>fl", function()
-  vim.cmd('noautocmd normal! "1y')        -- yank select value
+  vim.cmd('noautocmd normal! "1y')      -- yank select value
   local yank_value = vim.fn.getreg('1') -- get current yank value
   local value = (yank_value:gsub("([\\/])", "\\%1"))
-  vim.cmd('/\\V' .. value)         -- replace select value with text input
+  vim.cmd('/\\V' .. value)              -- replace select value with text input
 end, opts)
 
 -- Replace selected word in file
 keymap("v", "<leader>ra", function()
-  local text = vim.fn.input("Replace Text: ")
-  vim.cmd('noautocmd normal! y')                        -- yank select value
-  local yank_value = vim.fn.getreg('"')                 -- get current yank value
-  vim.cmd('%s/' .. yank_value .. '/' .. text .. '/gcI') -- replace select value with text input
+  local replace_text = vim.fn.input("Replace Text: ")
+  vim.cmd('noautocmd normal! "1y')                    -- yank select value
+  local yank_value = vim.fn.getreg('1')               -- get current yank value
+  local value = (yank_value:gsub("([\\/])", "\\%1"))  -- replace \ or / to be \\ or \/
+  local text = (replace_text:gsub("([\\/])", "\\%1")) -- replace \ or / to be \\ or \/
+  vim.cmd('%s/' .. value .. '/' .. text .. '/gcI')    -- replace select value with text input
 end, opts)
 
 -- change camel case to snake case

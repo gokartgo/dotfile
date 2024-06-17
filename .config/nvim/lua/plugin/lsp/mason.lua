@@ -1,4 +1,7 @@
 local servers = {
+  "css_variables",
+  "cssls",
+  "cssmodules_ls",
   "eslint",
 	"jsonls",   -- node version >= 14
   "lua_ls",

@@ -57,6 +57,5 @@ Plug 'hrsh7th/cmp-nvim-lsp'              -- use with nvim cmp plugins
 Plug 'neovim/nvim-lspconfig'             -- enable LSP
 Plug 'williamboman/mason.nvim'           -- simple to use language server installer
 Plug 'williamboman/mason-lspconfig.nvim' -- simple to use language server installer
-Plug 'jose-elias-alvarez/null-ls.nvim'   -- LSP diagnostics and code actions
 
 vim.call('plug#end')

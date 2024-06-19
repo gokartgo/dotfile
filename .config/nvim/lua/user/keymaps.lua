@@ -68,7 +68,7 @@ keymap("v", "<leader>fl", function()
   vim.cmd('noautocmd normal! "1y')      -- yank select value
   local yank_value = vim.fn.getreg('1') -- get current yank value
   local value = (yank_value:gsub("([\\/])", "\\%1"))
-  vim.cmd('/\\V' .. value)              -- replace select value with text input
+  vim.cmd('/\\V' .. value .. '\\C')              -- replace select value with text input
 end, opts)
 
 -- Replace selected word in file

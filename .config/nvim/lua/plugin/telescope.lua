@@ -80,18 +80,7 @@ end)
 
 vim.keymap.set('v', '<leader>fs', function()
   local text = vim.g.get_visual_selection()
-  builtin.grep_string({ search = text })
-end)
-
-vim.keymap.set('n', '<leader>fms', function()
-  local text = vim.fn.input({ prompt = "Find Text: " })
-
-  if text ~= nil and text ~= '' then
-    builtin.grep_string({ search = text, word_match = '-w' })
-  end
-end)
-
-vim.keymap.set('v', '<leader>fms', function()
-  local text = vim.g.get_visual_selection()
   builtin.grep_string({ search = text, word_match = '-w' })
 end)
+
+vim.keymap.set('n', '<leader>fm', telescope.extensions.media_files.media_files, {})

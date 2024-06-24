@@ -6,12 +6,13 @@ if not vim_plug_status_ok then
   return
 end
 
-Plug 'mhartington/oceanic-next'    -- theme
-Plug 'nvim-tree/nvim-web-devicons' -- optional, for file icons
-Plug 'nvim-tree/nvim-tree.lua'     -- file explorer
-Plug 'windwp/nvim-autopairs'       -- auto pairs ) } ]
-Plug 'mbbill/undotree'             -- track file change
-Plug 'numToStr/Comment.nvim'       -- comment helper
+Plug 'mhartington/oceanic-next'                       -- theme
+Plug 'nvim-tree/nvim-web-devicons'                    -- optional, for file icons
+Plug 'nvim-tree/nvim-tree.lua'                        -- file explorer
+Plug 'windwp/nvim-autopairs'                          -- auto pairs ) } ]
+Plug 'mbbill/undotree'                                -- track file change
+Plug 'numToStr/Comment.nvim'                          -- comment helper
+Plug('mg979/vim-visual-multi', { branch = 'master' }) -- multi cursor
 
 -- git
 Plug 'tpope/vim-fugitive'      -- git handle

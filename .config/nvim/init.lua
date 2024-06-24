@@ -14,6 +14,7 @@ require "plugin.nvim-tree"
 require "plugin.nvim-treesitter"
 require "plugin.rainbow-delimiters"
 require "plugin.telescope"
+require "plugin.vim-visual-multi"
 
 require "plugin.lsp"
 

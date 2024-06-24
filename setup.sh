@@ -1,9 +1,15 @@
 #!/bin/bash
 
 ### install brew
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-### neo vim
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" 
+# echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+### neovim
 # brew install neovim
+### link neovim
+# ln -sf ~/.dotfiles/.config/nvim ~/.config/nvim  
+### nvm and node version 20
+# brew install nvm
+# nvm install 20
 ### ripgrep use with telescope
 # brew install ripgrep
 ### chafa use with telescope telescope-media-files
@@ -26,4 +32,5 @@
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ### install zsh-vi-mode plugin
 # git clone https://github.com/jeffreytse/zsh-vi-mode ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-mode
-
+### link zshrc
+# ln -sf ~/.dotfiles/.zshrc ~/.zshrc

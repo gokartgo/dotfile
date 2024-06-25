@@ -8,12 +8,12 @@ if not telescope_status_ok then
 end
 
 if not actions_status_ok then
-  vim.notify("telescope action not found")
+  vim.notify("telescope.actions not found")
   return
 end
 
 if not builtin_status_ok then
-  vim.notify("telescope builtin not found")
+  vim.notify("telescope.builtin not found")
   return
 end
 

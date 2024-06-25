@@ -1,13 +1,17 @@
 local nvim_tree_status_ok, nvim_tree = pcall(require, "nvim-tree")
+local api_status_ok, api = pcall(require, "nvim-tree.api")
 
 if not nvim_tree_status_ok then
   vim.notify("nvim-tree not found")
   return
 end
 
-local function custom_on_attach(bufnr)
-  local api = require('nvim-tree.api')
+if not api_status_ok then
+  vim.notify("nvim-tree.api not found")
+  return
+end
 
+local function custom_on_attach(bufnr)
   local function opts(desc)
     return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
@@ -83,6 +87,9 @@ nvim_tree.setup({
     custom = { "^\\.git$" }
   }
 })
+
+-- Toggle Explore from NvimTree Plugin
+vim.keymap.set("n", "<leader>e", api.tree.toggle)
 
 vim.api.nvim_exec(
   [[

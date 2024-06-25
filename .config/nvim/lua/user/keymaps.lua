@@ -22,9 +22,6 @@ keymap("n", "<leader>h", "<C-w>v", opts) -- Split window horizontal
 keymap("n", "<leader>v", "<C-w>s", opts) -- Split window vertical
 keymap("n", "<leader>w", "<C-w>q", opts) -- Quit current window
 
--- Toggle Explore from NvimTree Plugin
-keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-
 -- Resize Screen With arrow
 keymap("n", "<S-Up>", ":resize -2<CR>", opts)
 keymap("n", "<S-Down>", ":resize +2<CR>", opts)

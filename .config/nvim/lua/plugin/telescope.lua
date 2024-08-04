@@ -41,6 +41,7 @@ telescope.setup {
         ["<C-d>"] = actions.preview_scrolling_down,
         ["<C-t>"] = actions.select_tab,
         ["<C-o>"] = actions.send_selected_to_qflist + actions.open_qflist,
+        ["<C-b>"] = actions.delete_buffer
       }
     },
     layout_strategy = 'vertical',

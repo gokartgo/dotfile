@@ -1,7 +1,9 @@
 local servers = {
+  "clangd",
   "css_variables",
   "cssls",
   "cssmodules_ls",
+  "dockerls",
   "eslint",
 	"jsonls",   -- node version >= 14
   "lua_ls",

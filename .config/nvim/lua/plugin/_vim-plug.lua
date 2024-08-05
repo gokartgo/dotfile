@@ -6,7 +6,7 @@ if not vim_plug_status_ok then
   return
 end
 
-Plug 'mhartington/oceanic-next'                       -- theme
+Plug 'ellisonleao/gruvbox.nvim'                       -- theme
 Plug 'nvim-tree/nvim-web-devicons'                    -- optional, for file icons
 Plug 'nvim-tree/nvim-tree.lua'                        -- file explorer
 Plug 'windwp/nvim-autopairs'                          -- auto pairs ) } ]

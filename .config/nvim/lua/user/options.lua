@@ -17,6 +17,8 @@ vim.opt.laststatus = 3                     -- set show only 1 status bar
 
 vim.opt.updatetime = 300                   -- set for lsp highlight to make it faster
 
+vim.opt.encoding = 'utf-8'                 -- set default file format to utf-8
+
 vim.cmd [[set iskeyword+=-]]               -- when use delete word (dw) it will include with - to be in word
 
 

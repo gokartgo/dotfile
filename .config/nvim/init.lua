@@ -1,6 +1,7 @@
+require "util"
+
 require "user.options"
 require "user.keymaps"
-require "util.index"
 
 require "plugin._vim-plug"
 require "plugin.colorscheme"

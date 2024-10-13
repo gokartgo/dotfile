@@ -21,6 +21,9 @@
 # nvim +PlugInstall +qall
 ### copy font to local machine
 # cp ./Fonts/MesloLGSNFNerdFont-Regular.ttf ~/Library/Fonts/MesloLGSNFNerdFont-Regular.ttf
+### add stdc++.h to cpp in Mac
+# sudo mkdir /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bits
+# sudo mv stdc++.h /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bits
 
 ### install oh my zsh for decorate iterm2 ( --unattended fix problem about bash script exits after installing oh my zsh )
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended

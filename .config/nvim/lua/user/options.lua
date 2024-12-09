@@ -21,6 +21,7 @@ vim.opt.encoding = 'utf-8'                 -- set default file format to utf-8
 
 vim.cmd [[set iskeyword+=-]]               -- when use delete word (dw) it will include with - to be in word
 
+vim.cmd [[set formatoptions-=cro]]               -- disable auto add comment when new line
 
 if vim.fn.has 'termguicolors' == 1 then
   vim.opt.termguicolors = true -- set termguicolors to enable highlight groups

@@ -1,4 +1,5 @@
 local function cpp(file_name)
+  local cwd = vim.fn.getcwd()
   local exe_name = string.gsub(file_name, '%.cpp$', '')
 
   vim.cmd('w') -- Save the file
@@ -9,7 +10,7 @@ local function cpp(file_name)
   if vim.v.shell_error == 0 then
     local run_cmd = 'osascript -e \'tell application "iTerm" to create window with default profile\'' ..
         ' -e \'tell application "iTerm" to tell current session of current window to write text "' ..
-        exe_name .. '"\''
+        'cd ' .. cwd .. ' && ' .. exe_name .. '"\''
 
     vim.fn.system(run_cmd)
     vim.cmd('redraw!')

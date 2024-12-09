@@ -12,9 +12,6 @@ vim.bo.softtabstop = 2
 vim.opt.hlsearch = true -- highlight all matches on previous search pattern
 vim.opt.incsearch = true
 
-vim.opt.statusline = 'col: %c %=file: %f ' -- set show column number in status line
-vim.opt.laststatus = 3                     -- set show only 1 status bar
-
 vim.opt.updatetime = 300                   -- set for lsp highlight to make it faster
 
 vim.opt.encoding = 'utf-8'                 -- set default file format to utf-8

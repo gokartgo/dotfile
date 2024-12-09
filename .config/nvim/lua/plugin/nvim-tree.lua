@@ -90,10 +90,3 @@ nvim_tree.setup({
 
 -- Toggle Explore from NvimTree Plugin
 vim.keymap.set("n", "<leader>e", api.tree.toggle)
-
-vim.api.nvim_exec2(
-  [[
-autocmd BufEnter,BufWinEnter,WinEnter,CmdwinEnter * if &filetype == 'NvimTree' | set laststatus=0 | else | set laststatus=3 | endif
-]],
-  { output = false }
-)

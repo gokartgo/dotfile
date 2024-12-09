@@ -41,6 +41,9 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 -- harpoon is use for navigate to file that you opened before
 Plug 'ThePrimeagen/harpoon'
 
+-- status line
+Plug 'nvim-lualine/lualine.nvim'
+
 -- nvim cmp plugins
 Plug 'hrsh7th/nvim-cmp'     -- the completions plugins
 Plug 'hrsh7th/cmp-buffer'   -- buffer completions

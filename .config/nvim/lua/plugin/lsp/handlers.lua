@@ -75,7 +75,7 @@ local function lsp_keymaps(bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts) -- go to next diagnostic detail
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>d", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)               -- show list of all diagnostic
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-f>", "<cmd>Format<CR>", opts)                                            -- format file
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-a>", "<cmd>AutoFix<CR>", opts)                                           -- format file
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-a>", "<cmd>AutoFix<CR>", opts)                                           -- auto fix file
 
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)

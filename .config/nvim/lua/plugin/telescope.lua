@@ -70,7 +70,9 @@ telescope.load_extension('media_files')
 
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fb', function()
+  builtin.buffers({ sort_mru = true, ignore_current_buffer = true })
+end)
 vim.keymap.set('n', '<leader>fs', function()
   local text = vim.fn.input({ prompt = "Find Text: " })
 

@@ -23,6 +23,7 @@ nvim_treesitter.setup {
     "tsx",
     "typescript",
     "vim",
+    "vimdoc",
     "yaml"
   },
 

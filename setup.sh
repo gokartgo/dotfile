@@ -16,6 +16,9 @@
 # brew install chafa
 ### dotnet for omnisharp lsp
 # brew install dotnet
+### java and maven for jdtls lsp
+# brew install java
+# brew install maven
 ### neo vim plug
 # curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim 
 # nvim +PlugInstall +qall
